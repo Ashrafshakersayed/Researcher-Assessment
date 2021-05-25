@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="Researcher_Assessment.User_Controls.ResearcherListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Researcher_Assessment.User_Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" Width="382.673"
+             Loaded="UserControl_Loaded">
+    <UserControl.Resources>
+        <Style  TargetType="Label">
+            <Setter Property="FontSize" Value="18" />
+        </Style>
+
+    </UserControl.Resources>
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1.5*"></RowDefinition>
+            <RowDefinition Height="8*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Grid  Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label>Filter by name:</Label>
+            <TextBox KeyUp="nameTB_KeyUp" FontSize="18"
+                    Margin="10" Grid.Column="1" Name="nameTB" ></TextBox>
+        </Grid>
+        <Grid Grid.Row="1" Margin="10">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0">Show:</Label>
+            <ComboBox SelectedIndex="0" SelectionChanged="ComboBox_SelectionChanged"
+                    Margin="10"  Grid.Column="1" FontSize="18" Name="filterCB">
+                <ComboBoxItem>all researchers</ComboBoxItem>
+                <ComboBoxItem>students only</ComboBoxItem>
+                <ComboBoxItem>A</ComboBoxItem>
+                <ComboBoxItem>B</ComboBoxItem>
+                <ComboBoxItem>C</ComboBoxItem>
+                <ComboBoxItem>D</ComboBoxItem>
+                <ComboBoxItem>E</ComboBoxItem>
+
+            </ComboBox>
+        </Grid>
+        <ListView x:Name="ResListView" SelectionChanged="ResListView_SelectionChanged"
+                  Grid.Row="2" FontSize="18" Margin="10">
+            
+        </ListView>
+            
+    </Grid>
+</UserControl>

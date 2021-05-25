@@ -1,0 +1,93 @@
+﻿<UserControl x:Class="Researcher_Assessment.User_Controls.ResearcherDetailView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Researcher_Assessment.User_Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="546.8"
+             Loaded="UserControl_Loaded" Width="476.238">
+    <UserControl.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="18" />
+        </Style>
+    </UserControl.Resources>
+    <Grid> 
+        <Image Height="100" Width="100" Name="img"   HorizontalAlignment="Right"
+               VerticalAlignment="Top" Margin="0,10,10,0" Source="http://programming.enthuses.me/1.png"
+               />
+    <StackPanel>
+   
+
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Margin="0 0 10 0">Name:</TextBlock>
+            <TextBlock x:Name="nameTB"></TextBlock>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Margin="0 0 10 0">Title:</TextBlock>
+            <TextBlock x:Name="TitleTB"></TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Margin="0 0 10 0">Unit:</TextBlock>
+            <TextBlock x:Name="UnitTB"></TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Margin="0 0 10 0">Campus:</TextBlock>
+            <TextBlock x:Name="CompusTB"></TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Margin="0 0 10 0">Email:</TextBlock>
+            <TextBlock x:Name="EmailTB"></TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Margin="0 0 10 0">Current job:</TextBlock>
+            <TextBlock x:Name="JobTB"></TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Margin="0 0 10 0">Commenced with institution:</TextBlock>
+            <TextBlock x:Name="startDateTB"></TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Margin="0 0 10 0">Commenced current position:</TextBlock>
+            <TextBlock x:Name="currDateTB"></TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock>Previous positions:</TextBlock>
+        </StackPanel>
+        <Border Background="GhostWhite" BorderBrush="Black" BorderThickness="1"
+               >
+            <StackPanel Name="PositonsContainer"
+                        MinHeight="30"></StackPanel>
+
+        </Border>
+
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Margin="0 0 10 0">Tenure:</TextBlock>
+            <TextBlock x:Name="TenureTB"></TextBlock>
+            <TextBlock Margin="50 0 10 0">Publications:</TextBlock>
+            <TextBlock x:Name="pubTB"></TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Margin="0 0 10 0">3-year average:</TextBlock>
+            <TextBlock x:Name="AverageTB"></TextBlock>
+            <TextBlock Margin="50 0 10 0">Performance:</TextBlock>
+            <TextBlock x:Name="performanceTB"></TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Margin="0 0 10 0">Supervisions:</TextBlock>
+            <TextBlock x:Name="SupervisionsTB"></TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Margin="0 0 10 0">Degree:</TextBlock>
+            <TextBlock x:Name="DegreeTB"></TextBlock>
+            <TextBlock Margin="50 0 10 0">Supervisor:</TextBlock>
+            <TextBlock x:Name="SupervisorTB"></TextBlock>
+        </StackPanel>
+        
+            <ListView x:Name="pubListView" MouseDoubleClick="pubListView_MouseDoubleClick">
+                
+            </ListView>
+    </StackPanel>
+    </Grid>
+</UserControl>

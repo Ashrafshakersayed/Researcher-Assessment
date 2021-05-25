@@ -1,0 +1,19 @@
+﻿<Window x:Class="Researcher_Assessment.User_Controls.PublicationDetailWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Researcher_Assessment.User_Controls"
+        mc:Ignorable="d"
+        Title="PublicationDetailWin" Height="450" Width="504.456">
+    <Grid >
+        <Grid x:Name="pubDetails">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="9*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button x:Name="hover" Grid.Row="1" Background="Red" FontWeight="Bold" Panel.ZIndex="0"
+               FontSize="20" Foreground="White" Margin="200 5 200 5" Click="Button_Click">Back</Button>
+    </Grid>
+    </Grid>
+</Window>
